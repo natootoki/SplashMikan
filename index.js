@@ -59,8 +59,9 @@ const loop = () => {
         ctx.fillStyle = '#007B43';
         ctx.font = 'bold 20px serif';
         ctx.textAlign = 'left';
-        ctx.fillText("ミカンは骨粗しょう症のリスクを", 10, y);
-        ctx.fillText("下げると言われています。", 10, y+50);
+        ctx.fillText("ミカンは", 10, y);
+        ctx.fillText("骨粗しょう症のリスクを", 10, y+50);
+        ctx.fillText("下げると言われています。", 10, y+100);
     }
     if(x>window.innerWidth-32)x=-128;
     x+=vx;
