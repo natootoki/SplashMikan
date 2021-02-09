@@ -8,7 +8,6 @@ let botan_get_x=0;
 let botan_set_x=(window.innerWidth-32)/2-64;
 let botan_set_y=(window.innerHeight-32)*2/3-64;
 let text=false;
-let sumaho=false;
 
 let canvas = document.getElementById('stage');
 let ctx = canvas.getContext('2d');
@@ -34,27 +33,19 @@ const loop = () => {
     otan_set_y=(window.innerHeight-32)*2/3-64;
     canvas.addEventListener('touchstart',()=>{
         botan_get_x=128;
-        push.currentTime = 0;
-        push.play();
         text=true;
-        sumaho=true;
     })
     canvas.addEventListener('mousedown',()=>{
-        if(!sumaho){
             botan_get_x=128;
             push.currentTime = 0;
             push.play();
             text=true;
-        }
     })
     canvas.addEventListener('touchend',()=>{
         botan_get_x=0;
-        sumaho=true;
     })
     canvas.addEventListener('mouseup',()=>{
-        if(!sumaho){
             botan_get_x=0;
-        }
     })
     canvas.width=window.innerWidth-32;
     canvas.height=window.innerHeight-32;
@@ -77,7 +68,7 @@ const loop = () => {
     if(x>window.innerWidth-32)x=-128;
     x+=vx;
     y+=vy;
-        y=(window.innerHeight-32)/3;
+    y=(window.innerHeight-32)/3;
     botan_set_x=(window.innerWidth-32)/2-64;
     botan_set_y=(window.innerHeight-32)*2/3-64;
     window.requestAnimationFrame(loop);
