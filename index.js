@@ -33,7 +33,16 @@ const loop = () => {
         push.play();
         text=true;
     })
+        canvas.addEventListener('touchstart',()=>{
+        botan_get_x=128;
+        push.currentTime = 0;
+        push.play();
+        text=true;
+    })
     canvas.addEventListener('mouseup',()=>{
+        botan_get_x=0;
+    })
+    canvas.addEventListener('touchend',()=>{
         botan_get_x=0;
     })
     canvas.width=window.innerWidth-32;
@@ -48,7 +57,7 @@ const loop = () => {
     ctx.drawImage(mikan, x, y);
     if(text){
         ctx.fillStyle = '#007B43';
-        ctx.font = 'bold 24px serif';
+        ctx.font = 'bold 20px serif';
         ctx.textAlign = 'left';
         ctx.fillText("ミカンは骨粗しょう症のリスクを", 10, y);
         ctx.fillText("下げると言われています。", 10, y+50);
