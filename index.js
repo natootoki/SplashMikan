@@ -19,6 +19,7 @@ const arm = new Image();
 const shade = new Image();
 const mikan_text = new Image();
 const push = new Audio('push5.mp3');
+push.play();
 mikan.src = "mikan_vivid.png";
 botan.src = "switch.png";
 arm.src = "arm.png";
