@@ -77,6 +77,9 @@ const loop = () => {
     if(x>window.innerWidth-32)x=-128;
     x+=vx;
     y+=vy;
+        y=(window.innerHeight-32)/3;
+    botan_set_x=(window.innerWidth-32)/2-64;
+    botan_set_y=(window.innerHeight-32)*2/3-64;
     window.requestAnimationFrame(loop);
 }
 
