@@ -48,7 +48,7 @@ const loop = () => {
     ctx.drawImage(mikan, x, y);
     if(text){
         ctx.fillStyle = '#007B43';
-        ctx.font = 'bold 32px serif';
+        ctx.font = 'bold 24px serif';
         ctx.textAlign = 'left';
         ctx.fillText("ミカンは骨粗しょう症のリスクを", 10, y);
         ctx.fillText("下げると言われています。", 10, y+50);
